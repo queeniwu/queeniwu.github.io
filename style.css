@@ -1,0 +1,25 @@
+html, body {
+  margin: 16px;
+  padding: 0;
+}
+canvas {
+  display: block;
+  
+}
+
+.tiktok-sans {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "wdth" 90;
+}
+
+h2 {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
