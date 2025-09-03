@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('video');
-    const stepSizes = [26, 9, 13, 5, 5, 5, 4, 17]; // Define your step sizes here
+    const stepSizes = [5, 3, 4]; // Define your step sizes here
     let playTimer;
     let currentStep = 0;
 
     // Click to play for current step duration
     video.addEventListener('click', function() {
+        // Only respond to clicks if video is paused
+        if (!video.paused) return;
+        
         const stepDuration = stepSizes[currentStep % stepSizes.length];
         
         // Clear any existing timer
