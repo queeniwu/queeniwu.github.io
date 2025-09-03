@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('video');
-    const stepSizes = [5, 3, 4]; // Define your step sizes here
+    const stepSizes = [26, 9, 13, 5, 5, 5, 4, 17]; // Define your step sizes here
     let playTimer;
     let currentStep = 0;
 
