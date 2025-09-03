@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const stepSizes = [26, 9, 13, 5, 5, 5, 4, 17]; // Define your step sizes here
     let playTimer;
     let currentStep = 0;
+    const audio = document.getElementById('audio');
+    audio.volume = 0.15;
 
     // Click to play for current step duration
     video.addEventListener('click', function() {
@@ -16,6 +18,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Start playing
         video.play();
+
+        // Start audio upon breakup
+        if (currentStep === 1) {
+            setTimeout(function() {
+                audio.play();
+            }, 2000);
+        }
         
         // Stop after step duration
         playTimer = setTimeout(function() {
@@ -31,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(playTimer);
         video.pause();
         video.currentTime = 0;
+        audio.pause();
+        audio.currentTime = 0;
         currentStep = 0;
     }
 });
