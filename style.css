@@ -23,3 +23,10 @@ h2 {
   font-weight: 500;
   font-style: normal;
 }
+
+p {
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
